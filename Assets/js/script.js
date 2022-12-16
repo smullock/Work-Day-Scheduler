@@ -1,23 +1,19 @@
-// TODO: Add code to display the current date in the header of the page.
+//Add code to display the current date in the header of the page.
 var today = dayjs();
 $('#currentDay').text(today.format('dddd, DD MMMM YYYY'));
 const currentHour = dayjs().format('hh');
 
 
-//rendering all the elements in browser
- //$(window).onload(function() {
 
 
 
-
+//add click event to the save button to accept the text entry
 $( ".saveBtn").each(function() {
  $(this).on('click', function(event) {
   event.preventDefault();
 
 
-  // set up your functionality for local storage
-  // look at how to get the textarea that is in the same div as the button 
-  // look at how to target the clicked button's sibling textarea
+  // sets up functionality for local storage
   var task = $(this).siblings(".description").val();
   var hourTime =  $(this).parent().attr("id");
 
